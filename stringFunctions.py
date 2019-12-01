@@ -1,3 +1,4 @@
+ 
 my_name = "i åm A PIAIC Student"
 
 # print list of all functions available for variable "name"
@@ -73,26 +74,86 @@ print("Index of \"u\" in given string: "+str(new_name) + "\n")
 
 
 # 12. isalnum       in-place - Returns True if all characters in the string are alphanumeric
+print("String is AlphaNumeric: " + str(my_name.isalnum()) + "\n")
+
 # 13. isalpha       in-place - Returns True if all characters in the string are in the alphabet
+print("String is Alphabetic Only: " + str(my_name.isalpha()))
+another_name = "iamastudent"
+print(another_name + " is Alphabetic Only: " + str(another_name.isalpha()) + "\n")
+
 # 14. isascii       in-place - Returns True if all characters in the string are ascii
+print("String is ASCII: " + str(my_name.isascii()))
+print(another_name + " is ASCII: " + str(another_name.isascii()) + "\n")
+
 # 15. isdecimal     in-place - Returns True if all characters in the string are decimals
+print("String is Decimal Only: " + str(my_name.isdecimal()) + "\n")
+
 # 16. isdigit       in-place - Returns True if all characters in the string are digits
+print("String is Digits Only: " + str(my_name.isdigit()) + "\n")
+
 # 17. isidentifier  in-place - Returns True if the string is an identifier
+print("String is an Identifier: " + str(my_name.isidentifier()) + "\n")
+
 # 18. islower       in-place - Returns True if all characters in the string are lower case
+print("String is in Lower case: " + str(my_name.islower()) + "\n")
+
 # 19. isnumeric     in-place - Returns True if all characters in the string are numeric
+print("String is numeric Only: " + str(my_name.isnumeric()) + "\n")
+
 # 20. isprintable   in-place - Returns True if all characters in the string are printable
+print("String is Printable: " + str(my_name.isprintable()) + "\n")
+
 # 21. isspace       in-place - Returns True if all characters in the string are whitespaces
+print("String has whitespaces only: " + str(my_name.isspace()) + "\n")
+
+
 # 22. istitle       in-place - Returns True if the string follows the rules of a title
+print("String is formatted as a title: " + str(my_name.istitle()) + "\n")
+another_name = "This Is A Title"
+print(another_name + " is formatted as a title: " + str(another_name.istitle()) + "\n")
+
+
 # 23. isupper       in-place - Returns True if all characters in the string are upper case
+print("String is all uppercase: " + str(my_name.isupper()) + "\n")
+
 # 24. join          in-place - Joins the elements of an iterable to the end of the string
+another_name = ("AI", "Cloud Native", "IoT", "BlockChain")
+another_name = "-".join(another_name)
+print(another_name + "\n")
+
 # 25. ljust         in-place - Returns a left justified version of the string
+print("\""+ my_name.ljust(50) + "\":This is left Justified in 50 spaces" + "\n")
+
 # 26. lower         in-place - Converts a string into lower case
+print("Lower case: " + my_name.lower() + "\n")
+
 # 27. lstrip        in-place - Returns a left trim version of the string
-# 28. maketrans     in-place - Returns a translation table to be used in translations
+another_name = "     a piaic student     "
+another_name = another_name.lstrip()
+print("This is left stripped of all whitespace: \"" + another_name + "\"\n")
+
+# # 28. maketrans     in-place - Returns a translation table to be used in translations
+# from string import maketrans, translate    #maketrans function to be imported from string
+# intab = "aeiou"
+# outtab = "12345"
+# trantab = maketrans(intab, outtab)
+# str = "this is string example....wow!!!"
+# print str.translate(trantab)
+
+
 # 29. partition     in-place - Returns a tuple where the string is parted into three parts
+new_name = my_name.partition("PIAIC")
+print("String partitioned in three parts:" + str(new_name) + "\n")
+
 # 30. replace       in-place - Returns a string where a specified value is replaced with a specified value
+new_name = my_name.replace("I", "e")
+print("I replaced in string with e: " + new_name + "\n")
+
 # 31. rfind         in-place - Searches the string for a specified value and returns the last position of where it was found
+new_name = my_name.rfind("t")
+print("Last position of \"t\" in string: " + str(new_name) + "\n")
 # 32. rindex        in-place - Searches the string for a specified value and returns the last position of where it was found
+
 # 33. rjust         in-place - Returns a right justified version of the string
 # 34. rpartition    in-place - Returns a tuple where the string is parted into three parts
 # 35. rsplit        in-place - Splits the string at the specified separator, and returns a list
