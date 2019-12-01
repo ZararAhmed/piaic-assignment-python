@@ -133,13 +133,6 @@ another_name = another_name.lstrip()
 print("This is left stripped of all whitespace: \"" + another_name + "\"\n")
 
 # # 28. maketrans     in-place - Returns a translation table to be used in translations
-# from string import maketrans, translate    #maketrans function to be imported from string
-# intab = "aeiou"
-# outtab = "12345"
-# trantab = maketrans(intab, outtab)
-# str = "this is string example....wow!!!"
-# print str.translate(trantab)
-
 
 # 29. partition     in-place - Returns a tuple where the string is parted into three parts
 new_name = my_name.partition("PIAIC")
@@ -152,22 +145,57 @@ print("I replaced in string with e: " + new_name + "\n")
 # 31. rfind         in-place - Searches the string for a specified value and returns the last position of where it was found
 new_name = my_name.rfind("t")
 print("Last position of \"t\" in string: " + str(new_name) + "\n")
+
 # 32. rindex        in-place - Searches the string for a specified value and returns the last position of where it was found
+new_name = my_name.rindex("t")
+print("Last index of \"t\" in string: " + str(new_name) + "\n")
 
 # 33. rjust         in-place - Returns a right justified version of the string
-# 34. rpartition    in-place - Returns a tuple where the string is parted into three parts
-# 35. rsplit        in-place - Splits the string at the specified separator, and returns a list
-# 36. rstrip        in-place - Returns a right trim version of the string
-# 37. split         in-place - Splits the string at the specified separator, and returns a list
-# 38. splitlines    in-place - Splits the string at line breaks and returns a list
-# 39. startswith    in-place - Returns true if the string starts with the specified value
-# 40. strip         in-place - Returns a trimmed version of the string
-# 41. swapcase      in-place - Swaps cases, lower case becomes upper case and vice versa
-# 42. title         in-place - Converts the first character of each word to upper case
-# 43. translate     in-place - Returns a translated string
-# 44. upper         in-place - Converts a string into upper case
-# 45. zfill         in-place - Fills the string with a specified number of 0 values at the beginning
+print("This is right Justified in 50 spaces: " + "\""+ my_name.rjust(50) +  "\"\n")
 
+# 34. rpartition    in-place - Returns a tuple where the string is parted into three parts
+new_name = my_name.rpartition("PIAIC")
+print("String right-partitioned in three parts:" + str(new_name) + "\n")
+
+# 35. rsplit        in-place - Splits the string at the specified separator, and returns a list
+print(my_name.rsplit(" "))       # split on spaces
+print("\n")
+
+# 36. rstrip        in-place - Returns a right trim version of the string
+another_name = "     a piaic student     "
+another_name = another_name.rstrip()
+print("This is right-stripped of all whitespace: \"" + another_name + "\"\n")
+
+# 37. split         in-place - Splits the string at the specified separator, and returns a list
+print(my_name.split(" "))       # split on spaces
+print("\n")
+
+# 38. splitlines    in-place - Splits the string at line breaks and returns a list
+print(my_name.splitlines())       # split on spaces
+print("\n")
+
+# 39. startswith    in-place - Returns true if the string starts with the specified value
+new_name = my_name.startswith('i')
+print("The given string starts with i: " + str(new_name))
+new_name = my_name.startswith('a')
+print("The given string starts with a: " + str(new_name) + "\n")
+
+# 40. strip         in-place - Returns a trimmed version of the string
+another_name = "     a piaic student     "
+another_name = another_name.strip()
+print("This is stripped of all whitespace from both ends: \"" + another_name + "\"\n")
+# 41. swapcase      in-place - Swaps cases, lower case becomes upper case and vice versa
+print("Case-swapped string: " + my_name.swapcase() + "\n")
+# 42. title         in-place - Converts the first character of each word to upper case
+print("Title-formatted string: " + my_name.title() + "\n")
+# 43. translate     in-place - Returns a translated string
+
+# 44. upper         in-place - Converts a string into upper case
+print("Full UPPER_CASE string: " + my_name.upper() + "\n")
+
+# 45. zfill         in-place - Fills the string with a specified number of 0 values at the beginning
+no_of_zeros = 5
+print("Filling the given string with " + str(no_of_zeros) + " zeros: " + my_name.zfill(no_of_zeros + len(my_name)) + "\n")
 
 # The original string is untouched
 print("Length of the original string \""+my_name+"\" is: "+str(len(my_name)))
