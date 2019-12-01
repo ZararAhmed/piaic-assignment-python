@@ -11,8 +11,8 @@
 
 
 ## Template
-## <Function No>. <Function Name>
-## Implementation
+### Function No. Function Name
+### Implementation
 
 #"In-place" function i.e does not change the value of the original variable
 #"In-memory" function i.e changes the value of the original variable
