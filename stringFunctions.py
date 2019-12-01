@@ -13,25 +13,31 @@ my_name = "i åm A PIAIC Student"
 #"In-place" function i.e does not change the value of the original variable
 #"In-memory" function i.e changes the value of the original variable
 
+
 # 1. capitalize     in-place - Capitalizes only the first character of the whole string and keeps all other characters small
 new_name = my_name.capitalize()    
-print("Capitalized: " + new_name + "\n")
+print("\nCapitalized: " + new_name + "\n")
+
 
 # 2. casefold       in-place - Converts whole string into lower case
 new_name = my_name.casefold()    
 print("Casefolded (All Small Letters): "+ new_name + "\n")
 
+
 # 3. center         in-place - Center the string in a specified space
 new_name = my_name.center(30)       # Take space of 40 chacacters and center the string in it. Leaving 5 spaces on each side
 print("Centralized in 30 characters: "+ new_name + "\n")
+
 
 # 4. count          in-place - Count the number of times a specified value occurs in the string (Case-sensitive)
 new_name = my_name.count('I')       # Count the number of times capital letter 'I' is in the string        
 print("Count of Capital \"I\" in the string: "+ str(new_name) + "\n")
 
+
 # 5. encode         in-place - Returns an encoded version of the string
 new_name = my_name.encode()
 print("Encoded string: "+str(new_name) + "\n")
+
 
 # 6. endswith       in-place - Returns true if the string ends with the specified value
 new_name = my_name.endswith('t')
@@ -39,14 +45,33 @@ print("The given string ends with t: " + str(new_name))
 new_name = my_name.endswith('a')
 print("The given string ends with a: " + str(new_name) + "\n")
 
+
 # 7. expandtabs     in-place - Sets the tab size of the string
-txt = "H\te\tl\tl\to"
-x =  txt.expandtabs(2)
-print(x)
+another_name = "i åm A\tPIAIC\tStudent"
+new_name = another_name.expandtabs(15)
+print("Expanded tab size in \"i åm tA\\tPIAIC\\tStudent\" where \\t are tabs, by 15:\"" + new_name  + "\"\n")
+
+
 # 8. find           in-place - Searches the string for a specified value and returns the position of where it was found
+new_name = my_name.find("Stud")
+print("Position of \"Stud\" in given string: "+str(new_name) + "\n")
+
+
 # 9. format         in-place - Formats specified values in a string
+new_name = "\"I am {age:2d} years old\""
+print("Formatted string:" +new_name.format(age = 25) + " Through format function\n");
+
+
 # 10. format_map    in-place - Formats specified values in a string
-# 11. index         in-place - Searches the string for a specified value and returns the position of where it was found
+format_input_dict = {'age':25} 
+print("Formatted string:" +new_name.format_map(format_input_dict)  + " Through formatmap function\n");
+
+
+# 11. index         in-place - Searches the string for a specified value and returns the index of where it was found
+new_name = my_name.index("udent")
+print("Index of \"u\" in given string: "+str(new_name) + "\n")
+
+
 # 12. isalnum       in-place - Returns True if all characters in the string are alphanumeric
 # 13. isalpha       in-place - Returns True if all characters in the string are in the alphabet
 # 14. isascii       in-place - Returns True if all characters in the string are ascii
