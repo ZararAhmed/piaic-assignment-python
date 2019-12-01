@@ -14,8 +14,8 @@
 ### Function No. Function Name
 ### Implementation
 
-#"In-place" function i.e does not change the value of the original variable
-#"In-memory" function i.e changes the value of the original variable
+#### "In-place" function i.e does not change the value of the original variable
+#### "In-memory" function i.e changes the value of the original variable
 
 
 ### 1. capitalize     in-place - Capitalizes only the first character of the whole string and keeps all other characters small
