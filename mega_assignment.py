@@ -60,4 +60,27 @@ for j, z in enumerate(q):
 
 ####################################### - 22
 
+D = dict()
+for i in range(3):
+    for j in range(4):
+        D[i] = j
+        print(D[i])
+print(D)
 
+###########################################################
+def increment_score(bonus, score = True, points = 1):
+    print(bonus)
+    print(score)
+    print(points)
+    return str(bonus) + ", " + str(score) + ", " + str(points) +""
+
+print(increment_score(2))
+
+#############################################################
+
+def avg ( x , y , z = 50 ):
+    adding = x + y + z
+    avg_value = adding / 3
+    return avg_value
+y = avg ( x = 5 , y = 9 , z = 20 )
+print(y)
